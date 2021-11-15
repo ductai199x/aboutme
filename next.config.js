@@ -5,7 +5,7 @@ module.exports = {
   },
   images: {
     loader: 'akamai',
-    path: '',
+    path: '/',
   },
   // assetPrefix: process.cwd() + "/out/"
   // assetPrefix: process.env.NODE_ENV === 'production' ? '/aboutme' : '',
