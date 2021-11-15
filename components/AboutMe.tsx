@@ -17,6 +17,10 @@ interface ExpType {
     desc: string;
 }
 
+const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+}
+
 // https://colorlib.com/wp/resume-website-templates/
 export const AboutMe: FC = () => {
     const { theme } = useContext(ThemeCtx);
@@ -36,7 +40,7 @@ export const AboutMe: FC = () => {
         <div className={cx(styles["about-me"], theme)}>
             <div className={styles["cool-picture"]}>
                 <MatrixRain className={styles["matrix-rain"]} />
-                <Image className={styles["overlay-photo"]} src={myface} layout="fill" placeholder="blur" />
+                <Image className={styles["overlay-photo"]} src={myface} layout="fill" loader={myLoader} />
                 <div className={styles["intro"]}>
                     <div className={styles["name"]}>
                         <h1>

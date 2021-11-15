@@ -6,7 +6,7 @@ module.exports = {
     css: true
   },
   images: {
-    loader: 'akamai',
+    loader: 'custom',
     path: '',
   },
   // assetPrefix: process.cwd() + "/out/"
