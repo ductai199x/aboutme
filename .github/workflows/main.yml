@@ -45,7 +45,7 @@ jobs:
         run: touch ./out/.nojekyll
 
       - name: Deploy
-        uses: ductai199x/github-pages-deploy-action@4.1.1
+        uses: ductai199x/aboutme@1.0.0
         with:
           branch: gh-pages
           publish_dir: ./out
