@@ -23,7 +23,7 @@ const curYear = new Date().getFullYear();
 export const descriptionList = [curYear - 1998 + " years old", "PhD student", "Drexel University"];
 
 export const shortPara =
-    "Compassion, humble, responsible, persistent, reasoning and knowledgeable are the words \
+    "Compassionate, humble, responsible, persistent and knowledgeable are the words \
 people use to describe me because I have always “stayed hungry and stayed foolish”";
 
 const python = "Python";
