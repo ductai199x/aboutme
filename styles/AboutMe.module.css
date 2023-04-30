@@ -340,20 +340,19 @@ div.tech-knowledge > .exp-list {
 }
 
 .exp-overlay-card {
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     background-color: white;
-    max-width: 60vw;
+    max-width: 85vw;
     height: fit-content;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
@@ -381,15 +380,3 @@ div.tech-knowledge > .exp-list {
     top: 5px;
     right: 5px;
 }
-
-@media only screen and (max-height: 750px) {
-    .exp-overlay-card {
-        max-height: 90vh;
-    }
-}
-
-/* @media only screen and (min-height: 750px) {
-    .exp-overlay-card {
-        max-height: 45vh;
-    }
-} */
