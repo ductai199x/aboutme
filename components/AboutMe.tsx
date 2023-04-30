@@ -36,7 +36,6 @@ export const AboutMe: FC = () => {
     };
 
     const handleCardClick = (k: ExpType): void => {
-        console.log(k);
         toggleOverlay();
         setOverlayContent(k);
     };
