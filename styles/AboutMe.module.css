@@ -204,6 +204,12 @@ div.resume {
     }
 }
 
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+    .about-me {
+        margin-bottom: 5rem;
+    }
+}
+
 /* Short description about me */
 div.short-desc {
     flex: 0 1 auto;
