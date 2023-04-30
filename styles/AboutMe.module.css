@@ -92,6 +92,14 @@ div.intro > .social > .social-list > li > a > svg {
     height: auto;
 }
 
+div.intro > .social > .social-list > li > a {
+    color: var(--text-primary);
+}
+
+div.intro > .social > .social-list > li > a:hover {
+    color: var(--color-blue);
+}
+
 div.intro > .social > .social-list > li:not(:last-child) {
     margin-right: 10px;
 }
