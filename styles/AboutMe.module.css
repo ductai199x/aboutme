@@ -337,8 +337,8 @@ div.tech-knowledge > .exp-list {
     white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    letter-spacing: 1.5px;
-    line-height: 2.8ch;
+    letter-spacing: 1.35px;
+    line-height: 1.45;
 }
 
 .exp-overlay {
@@ -375,7 +375,7 @@ div.tech-knowledge > .exp-list {
 
 .exp-overlay-card > ul > li {
     letter-spacing: 1.35px;
-    line-height: 2.6ch;
+    line-height: 1.45;
     margin-bottom: 4px;
 }
 
