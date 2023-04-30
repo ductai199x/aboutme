@@ -345,8 +345,6 @@ div.tech-knowledge > .exp-list {
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 0;
-    margin-bottom: 0;
     background-color: white;
     max-width: 85vw;
     height: fit-content;
@@ -380,3 +378,17 @@ div.tech-knowledge > .exp-list {
     top: 5px;
     right: 5px;
 }
+
+@media only screen and (max-height: 930px) {
+    .exp-overlay-card {
+        top: 25px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* @media only screen and (min-height: 750px) {
+    .exp-overlay-card {
+        max-height: 45vh;
+    }
+} */
