@@ -2,9 +2,6 @@ const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
   reactStrictMode: true,
-  experimental: {
-    css: true
-  },
   images: {
     loader: 'custom',
     path: '',

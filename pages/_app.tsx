@@ -11,7 +11,7 @@ type ThemeCtx = {
 export const ThemeCtx = createContext<ThemeCtx>({} as ThemeCtx)
 
 const MyApp = ({ Component, pageProps }) => {
-    const [theme, setTheme] = useState<Theme>("light")
+    const [theme, setTheme] = useState<Theme>("dark")
 
     const toggleTheme = () => {
         setTheme(theme => (theme == "light" ? "dark": "light"));

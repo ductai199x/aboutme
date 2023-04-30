@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 3rem;
+    margin-left: 1rem;
 }
 
 /* Container for the matrix rain and the photo */
@@ -13,7 +14,7 @@ div.cool-picture {
     display: flex;
     justify-content: space-between;
     min-width: 350px;
-    box-shadow: 10px 10px 5px darkslategrey;
+    box-shadow: 5px 5px 5px darkslategrey;
     border-radius: 15px;
     border-style: ridge;
     border-width: 3px;
@@ -31,9 +32,8 @@ div.cool-picture > img {
     z-index: 2;
     opacity: 0.55;
     object-fit: cover;
-    min-width: 0;
-    flex: none;
-    border-radius: 15px;
+    width: 100%;
+    height: 100%;
 }
 
 /* Matrix rain */
@@ -65,25 +65,31 @@ div.intro > .name {
 }
 
 div.intro > .jobs {
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 600;
     line-height: 1;
-    letter-spacing: 2px;
+    letter-spacing: 1.7px;
 }
 
 div.intro > .social > .social-list {
     display: flex;
     justify-content: center;
     padding: 0;
-    margin: 15px 0 70px;
+    margin: 15px 0 50px;
     list-style: none;
 }
 
 div.intro > .social > .social-list > li {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+div.intro > .social > .social-list > li > a > svg {
+    width: 60%;
+    height: auto;
 }
 
 div.intro > .social > .social-list > li:not(:last-child) {
@@ -95,7 +101,7 @@ div.resume {
     display: flex;
     flex-direction: column;
     margin-left: 3rem;
-
+    margin-top: 1rem;
     color: var(--text-primary);
 }
 
@@ -105,7 +111,7 @@ div.resume {
         top: 1rem;
         align-self: flex-start;
         height: 95vh;
-        width: 28vw;
+        width: 29.5vw;
     }
 
     div.resume {
@@ -123,7 +129,7 @@ div.resume {
         top: 1rem;
         align-self: flex-start;
         height: 95vh;
-        width: 28vw;
+        width: 29.5vw;
     }
 
     div.resume {
@@ -141,7 +147,7 @@ div.resume {
         top: 1rem;
         align-self: flex-start;
         height: 95vh;
-        width: 28vw;
+        width: 29.5vw;
     }
 
     div.resume {
@@ -159,7 +165,7 @@ div.resume {
         top: 1rem;
         align-self: flex-start;
         height: 95vh;
-        width: 28vw;
+        width: 29.5vw;
     }
 
     div.resume {
@@ -171,16 +177,18 @@ div.resume {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 300px) and (max-width: 900px) {
     div.cool-picture {
-        height: 80vh;
+        height: 55vh;
         width: 90vw;
         position: relative;
+        min-width: auto;
     }
 
     div.resume {
         width: 80vw;
         margin-left: 1rem;
+        margin-top: -1rem;
     }
 
     .exp-card {
@@ -194,18 +202,18 @@ div.short-desc {
 }
 
 div.short-desc > .desc {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
 }
 
 div.short-desc > .desc-list {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 div.short-desc > .desc-list > .desc-item {
-    font-size: 18px;
+    font-size: 1.05rem;
     font-weight: 500;
     font-style: italic;
     line-height: 1.67;
@@ -218,7 +226,7 @@ div.short-desc > .desc-list > .desc-item:not(:last-child) {
 
 div.short-desc > .desc-list > .desc-item:not(:last-child)::after {
     content: "/";
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
     line-height: 1.67;
@@ -227,7 +235,8 @@ div.short-desc > .desc-list > .desc-item:not(:last-child)::after {
 }
 
 div.short-desc > .desc-para {
-    line-height: 1.73;
+    font-size: 1.1rem;
+    line-height: 1.53;
 }
 
 /* My technical experiences */
@@ -248,6 +257,7 @@ div.tech-knowledge > .exp-list {
     flex: 0 1 auto;
     margin: 7px;
     background-color: var(--bg-secondary);
+    min-height: 15rem;
 }
 
 .exp-card:hover {
@@ -306,11 +316,15 @@ div.tech-knowledge > .exp-list {
     font-weight: 300;
     text-align: justify;
     text-justify: inter-word;
-    max-width: 100ch;
-    white-space: nowrap;
+    max-width: 150ch;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    line-height: 2.8ch;
 }
 
 .exp-overlay {
@@ -326,6 +340,7 @@ div.tech-knowledge > .exp-list {
     margin: auto;
     background-color: white;
     max-width: 60vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -342,6 +357,17 @@ div.tech-knowledge > .exp-list {
     text-align: left;
 }
 
+.exp-overlay-card > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.exp-overlay-card > ul > li {
+    letter-spacing: 1.35px;
+    line-height: 2.6ch;
+    margin-bottom: 4px;
+}
+
 .exp-overlay-card > .overlay-close-btn {
     position: absolute;
     top: 5px;
@@ -354,8 +380,8 @@ div.tech-knowledge > .exp-list {
     }
 }
 
-@media only screen and (min-height: 750px) {
+/* @media only screen and (min-height: 750px) {
     .exp-overlay-card {
         max-height: 45vh;
     }
-}
+} */

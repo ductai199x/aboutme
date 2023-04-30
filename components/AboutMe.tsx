@@ -9,12 +9,17 @@ import { Button, Overlay, Card, Elevation, Classes, Intent } from "@blueprintjs/
 import { expList, descriptionList, shortPara, social } from "../lib/aboutme";
 import myface from "../public/myface.png";
 
+interface TaskDescType {
+    task_desc: string;
+    type: string;
+    link: string;
+}
 interface ExpType {
     role: string;
     where: string;
     date: string;
     tech: string[];
-    desc: string;
+    desc: TaskDescType[];
 }
 
 const myLoader = ({ src, width, quality }) => {
@@ -40,14 +45,14 @@ export const AboutMe: FC = () => {
         <div className={cx(styles["about-me"], theme)}>
             <div className={styles["cool-picture"]}>
                 <MatrixRain className={styles["matrix-rain"]} />
-                <Image className={styles["overlay-photo"]} src={myface} layout="fill" loader={myLoader} />
+                <Image className={styles["overlay-photo"]} src={myface} loader={myLoader} alt=""/>
                 <div className={styles["intro"]}>
                     <div className={styles["name"]}>
                         <h1>
-                            <b>Tai Nguyen</b>
+                            <b>Tai D. Nguyen</b>
                         </h1>
                     </div>
-                    <div className={styles["jobs"]}>Developer, ML Researcher</div>
+                    <div className={styles["jobs"]}>AI Researcher, Computer & Software Engineer</div>
                     <div className={styles["social"]}>
                         <ul className={styles["social-list"]}>
                             {Object.keys(social).map((key, idx) => {
@@ -113,7 +118,13 @@ export const AboutMe: FC = () => {
                                             return <li key={"overlay_" + i}>{k}</li>;
                                         })}
                                     </ul>
-                                    <p id={styles["exp-desc"]}>{overlayContent.desc}</p>
+                                    <ul>
+                                    {
+                                        overlayContent.desc.map(desc => {
+                                            return <li>{desc.task_desc}</li>
+                                        })
+                                    }
+                                    </ul>
                                 </Card>
                             ) : (
                                 <div></div>
@@ -134,7 +145,7 @@ export const AboutMe: FC = () => {
                                             return <li key={i + "_" + i2}>{k2}</li>;
                                         })}
                                     </ul>
-                                    <p id={styles["exp-desc"]}>{k.desc}</p>
+                                    <p id={styles["exp-desc"]}>{k.desc.map(d => d.task_desc).join(" //\n")}</p>
                                 </Card>
                             );
                         })}

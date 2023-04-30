@@ -43,14 +43,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-    padding: 1rem;
-    margin-left: 5rem;
-    width: 100% - 5rem;
+    margin-left: 4rem;
 }
 
 @media only screen and (max-width: 600px) {
     main {
         margin: 0;
+        width: 100%;
     }
 }
 

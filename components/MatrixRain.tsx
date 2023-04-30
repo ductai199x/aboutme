@@ -32,19 +32,19 @@ export interface MatrixRainProps {
 
 const defaultProps: MatrixRainProps = {
     className: "matrix-rain",
-    drawTimerMs: 40,
+    drawTimerMs: 50,
     fgColor: "#00ff00",
     bgColor: "#000000",
     tipColor: "#FFFFFF",
-    fontSize: 14,
-    bgAlpha: 0.3,
+    fontSize: 13,
+    bgAlpha: 0.1,
     rainbow: true,
     maxCycle: 100,
-    yVelocity: 2.5,
+    yVelocity: 2.0,
     maxTrailLength: 10,
     minTrailLength: 3,
     word: "",
-    spawnChance: 0.12,
+    spawnChance: 0.11,
 };
 
 const getRainSize = (
