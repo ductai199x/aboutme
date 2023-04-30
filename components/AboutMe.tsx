@@ -115,13 +115,13 @@ export const AboutMe: FC = () => {
                                     <div id={styles["exp-where"]}>{overlayContent.where}</div>
                                     <ul id={styles["exp-tech"]}>
                                         {overlayContent.tech.map((k, i) => {
-                                            return <li key={"overlay_" + i}>{k}</li>;
+                                            return <li key={"overlay_tech_" + i}>{k}</li>;
                                         })}
                                     </ul>
                                     <ul>
                                     {
-                                        overlayContent.desc.map(desc => {
-                                            return <li>{desc.task_desc}</li>
+                                        overlayContent.desc.map((desc, j) => {
+                                            return <li key={"overlay_desc_" + j}>{desc.task_desc}</li>
                                         })
                                     }
                                     </ul>
