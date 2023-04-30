@@ -145,7 +145,7 @@ export const AboutMe: FC = () => {
                                             return <li key={i + "_" + i2}>{k2}</li>;
                                         })}
                                     </ul>
-                                    <p id={styles["exp-desc"]}>{k.desc.map(d => d.task_desc).join(" //\n")}</p>
+                                    <p id={styles["exp-desc"]}>{k.desc.map(d => "- " + d.task_desc).join(" //\n")}</p>
                                 </Card>
                             );
                         })}
