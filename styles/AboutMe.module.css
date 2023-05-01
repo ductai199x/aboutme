@@ -333,10 +333,6 @@ div.tech-knowledge > .exp-list {
     overflow: hidden;
     letter-spacing: 1.35px;
     line-height: 1.45;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
 }
 
 .exp-overlay {

@@ -1,4 +1,4 @@
-import React, { FC, useContext, useState } from "react";
+import React, { FC, useContext, useState, useEffect } from "react";
 import cx from "classnames";
 import Image from "next/image";
 import MatrixRain from "./MatrixRain";
@@ -24,6 +24,13 @@ interface ExpType {
 
 const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
+}
+
+const clampText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) {
+        return text;
+    }
+    return `${text.substring(0, maxLength - 3)}...`;
 }
 
 // https://colorlib.com/wp/resume-website-templates/
@@ -144,7 +151,7 @@ export const AboutMe: FC = () => {
                                             return <li key={i + "_" + i2}>{k2}</li>;
                                         })}
                                     </ul>
-                                    <p id={styles["exp-desc"]}>{k.desc.map(d => "- " + d.task_desc).join(" //\n")}</p>
+                                    <p id={styles["exp-desc"]}>{clampText(k.desc.map(d => "- " + d.task_desc).join(" //\n"), 150)}</p>
                                 </Card>
                             );
                         })}
