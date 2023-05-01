@@ -294,6 +294,7 @@ div.tech-knowledge > .exp-list {
     font-weight: 600;
     letter-spacing: 1.5px;
 }
+
 .exp-card > #exp-tech {
     font-size: 0.9rem;
     font-weight: 400;
@@ -327,9 +328,9 @@ div.tech-knowledge > .exp-list {
 .exp-card > #exp-desc {
     font-size: 0.8rem;
     font-weight: 300;
-    max-width: 150ch;
-    /* max-height: 90px; */
-    white-space: pre-wrap;
+    max-width: 100%;
+    max-height: 120px;
+    white-space: break-spaces;
     overflow: hidden;
     letter-spacing: 1.35px;
     line-height: 1.45;
