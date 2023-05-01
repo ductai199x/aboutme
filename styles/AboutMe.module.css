@@ -328,15 +328,15 @@ div.tech-knowledge > .exp-list {
     font-size: 0.8rem;
     font-weight: 300;
     max-width: 150ch;
-    /* display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical; */
     max-height: 90px;
     white-space: pre-wrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     letter-spacing: 1.35px;
     line-height: 1.45;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 .exp-overlay {
