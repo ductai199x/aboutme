@@ -328,7 +328,7 @@ div.tech-knowledge > .exp-list {
     font-size: 0.8rem;
     font-weight: 300;
     max-width: 150ch;
-    max-height: 90px;
+    /* max-height: 90px; */
     white-space: pre-wrap;
     overflow: hidden;
     letter-spacing: 1.35px;
